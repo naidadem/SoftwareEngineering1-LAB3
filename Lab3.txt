@@ -1,0 +1,29 @@
+Lab 3: Unit testing
+Unit Testing
+
+This assignment will make you acquainted with unit testing. Concretely, you will use JUnit, the unit testing framework for Java. You will run the tests from the Eclipse IDE for Java developers. JUnit is built into Eclipse so there is no need for installation. The lab has been developed and tested on Eclipse Mars Release (4.5.0), however it should work on other versions as well. If you have problems with version incompatibility, send the lab assistant a message asking for help. We recommend trying out one (or more) of the many JUnit tutorials available online. Start by importing the attached Lab3.zip  as a project into Eclipse (File -> Import -> Existing Projects into Workspace -> Select archive file). 
+
+After the import, you should have the project Lab3 into your Package Explorer. Make sure the JUnitlibrary and the JRE System Library are properly referenced. If not, fix it before moving on right click on the project Properties -> Java Build Path -> Libraries. Double click on Lab3 to open it. Once the project is open you will see two packages: Lab3.Bank and Lab3.tests containing the source code and the test cases, respectively. In the package containing the source code you will see the Account.java class. Open the class and analyze its functionality. The other package in the project named lab3.test contains the JUnit test cases. As you can see there is only one class called AccountTest.java which contains all the necessary test methods for the Account class. Open the AccountTest test class and run it, by right clicking on the class file and selecting Run As -> JUnit Test. 
+
+Assignment description: 
+
+
+In this assignment you will have to provide test cases for a simplified bank account functionality. The functionality of a bank account has been implemented as one class which provides 5 core methods and the standard getter and setter functions for the private members.
+
+The Account.java class is supposed to simulate a simple bank account of a customer. It provides the following basic functionalities: creating new account which can be either default (no money and the default currency shall be Swedish Krona) or creating a new account by providing an initial amount and the currency. The class has only two private members: currency and balance. The currency is of type string and contains the code (ex: SEK, EUR, USD) and the balance is of type Double and represents the amount of money that the account has on disposal. Both of the private members have standard getter and setter methods. Some example test cases for getter and setter methods have been provided initially. The rest of the functionalities provided by the are:
+
+withdrawing desired amount from the account (withdraw all money from account represents a special case). We assume a debit account, which means that the user shall not be allowed to withdraw more money than the available amount,
+adding money to account (deposit money),
+converting the amount on the balance to another currency by providing new currency code and a conversion rate (positive real number greater than zero) which should be applied to the amount currently disposable amount of money on the account, and
+transfer of all the funds onto a new account. The funds are transferred to a new account provided as an input parameter to the TransferToAccount method.
+Assignment 3: 
+
+Provided the short description of the class and its member functions, your task is to write test cases for all the "Not yet implemented" test methods. In order to pass the assignment, you must fulfill the following requirements:
+Write at least one test case for each method provided by the IAccount.java interface that will reflect the system's expected use.
+Write at least two test cases for each method (with exception of testWithdrawAll() where one test case is enough) provided by the IAccount.java interface that will result in detecting bugs (errors) in the code. The discovered bugs should be documented using Java comments in the test functions. After a particular defect has been detected, you shall modify the source code such that the test cases that previously failed now pass. The test cases must be designed intelligently (as opposite to random test case generation) to aim at discovering potential bugs in the implementation of the Account class.
+You can write all the test cases for each method under the same test method of the test class. Some of the techniques for generating black-box tests are given in the lecture slides.
+Each of the test scenarios must be documented. The documentation for each test scenario must include the following information: short description, explanation of why you have selected the particular test case scenario (ex: how you have selected the inputs or which type of error you are aiming to find). The documentation for each test case must be written in java comments directly above the test case (in the test method).
+Reporting the Assignment
+
+The solution of the assignment must be repleted as an export to the project. To export you project, select the root package folder for the project (right-click (on the root) -> Export -> Archive file), fill in the requested data and generate a .zip file. Then you submit the generated .zip file via blackboard.
+
